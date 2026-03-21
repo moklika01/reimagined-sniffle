@@ -1,9 +1,8 @@
 name: Automated System Provisioning
 
 on:
-  workflow_dispatch: # تفعيل يدوي
-  schedule:
-    - cron: '0 */4 * * *' # الجدولة الزمنية للعمل التلقائي
+repository_dispatch:
+    types: [run-all-my-tasks] # هذه هي كلمة السر التي ستشغل الملفات
 
 jobs:
   deploy_virtual_node:
