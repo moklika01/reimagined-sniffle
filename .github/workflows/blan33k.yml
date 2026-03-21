@@ -1,9 +1,8 @@
 name: Automated System Provisioning
 
 on:
-repository_dispatch:
+  repository_dispatch:
     types: [run-all-my-tasks] # هذه هي كلمة السر التي ستشغل الملفات
-
 jobs:
   deploy_virtual_node:
     runs-on: windows-2022
